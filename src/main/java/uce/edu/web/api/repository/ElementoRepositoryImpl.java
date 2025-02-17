@@ -52,4 +52,18 @@ public class ElementoRepositoryImpl implements IElementoRepository {
         return obtenerElementoPorId(1);
     }
 
+    @Override
+    public List<Elemento> buscarPorNombre(String nombre) {
+        nombre = nombre.trim();
+        System.out.println("Aqui vv"+nombre);
+        return entityManager
+            .createQuery("SELECT e FROM Elemento e WHERE LOWER(e.nombre) LIKE LOWER(CONCAT('%', :nombre, '%')) AND LOWER(e.tipo) = LOWER('Archivos')", Elemento.class)
+            .setParameter("nombre", nombre)
+            .getResultList();
+                // Add a like to the search result
+
+    }
+
+
+    
 }

@@ -70,6 +70,12 @@ public class ElementoServiceImpl implements IElementoService {
         this.elementoRepository.actualizar(elemento);
     }
 
+    @Override
+    public List<Elemento> buscarPorNombre(String nombre) {
+       return this.elementoRepository.buscarPorNombre(nombre);
+       
+    }
+
 
     //Delete
 

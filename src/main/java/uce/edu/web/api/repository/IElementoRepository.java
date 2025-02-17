@@ -18,4 +18,7 @@ public interface IElementoRepository {
     public void actualizar(Elemento elemento);
 
     //Delete, no pide
+
+    //Busqueda
+    public List<Elemento> buscarPorNombre(String nombre);
 }

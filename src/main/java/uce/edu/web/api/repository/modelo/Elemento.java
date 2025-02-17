@@ -24,6 +24,9 @@ public class Elemento {
     @SequenceGenerator(name = "seq_elemento", sequenceName = "seq_elemento", allocationSize = 1)
     @Column(name="elem_id")
     private Integer id;
+   
+    
+    
     @Column(name="elem_nombre")
     private String nombre;
     @Column(name="elem_tipo")

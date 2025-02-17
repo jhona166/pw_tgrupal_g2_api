@@ -20,5 +20,6 @@ public interface IElementoService {
 
     //Delete
 
-    
+      //Busqueda
+      public List<Elemento> buscarPorNombre(String nombre);
 }
